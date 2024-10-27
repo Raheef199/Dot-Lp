@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="stylesheet" href="css/all.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Dot LP</title>
+    <script>
+      $(document).ready(function () {
+        $(".product-details .key1").click(function () {
+          $(".product-details .p1").toggle(500);
+          $(".camera-icon").hide();
+          $(".img1").show();
+          $(".img2").hide();
+          $(".img3").hide();
+        });
+        $(".product-details .key2").click(function () {
+          $(".product-details .p2").toggle(500);
+          $(".camera-icon").hide();
+          $(".img2").show();
+          $(".img1").hide();
+          $(".img3").hide();
+        });
+        $(".product-details .key3").click(function () {
+          $(".product-details .p3").toggle(500);
+          $(".camera-icon").hide();
+          $(".img3").show();
+          $(".img1").hide();
+          $(".img2").hide();
+        });
+
+        $(".play").on("click", function () {
+          if ($(".myVid").get(0).paused) {
+            $(".myVid").trigger("play");
+            $(".pause-icon").show();
+            $(".play-icon").hide();
+          } else {
+            $(".myVid").trigger("pause");
+            $(".play-icon").show();
+            $(".pause-icon").hide();
+          }
+        });
+
+        $(".camera-iconn").click(function () {
+          $(".myVid").toggle();
+          $(".landing-image").toggle();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="primary-section">
+      <video autoplay muted loop class="myVid">
+        <source src="video/Video.mp4" type="video/mp4" />
+      </video>
+
+      <img
+        class="landing-image image1"
+        src="img/main-img.webp"
+        alt="landing image"
+      />
+
+      <nav class="navbar">
+        <ul>
+          <li><a href="#benefits">Key Benefits</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+        </ul>
+        <button class="sign-up">Sign Up</button>
+      </nav>
+      <div class="primary-body">
+        <button class="play">
+          <ion-icon class="play-icon" name="play"></ion-icon>
+          <ion-icon class="pause-icon" name="pause-outline"></ion-icon>
+        </button>
+        <h1>
+          This is your<br />
+          Primary Heading.
+        </h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+          numquam eius a, neque nam impedit corrupti blanditiis? Omnis mollitia,
+          minus, tenetur odio, cum commodi vitae et distinctio error porro
+          aliquam. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          Magnam minima tenetur, recusandae repellat commodi assumenda
+        </p>
+        <div class="icons">
+          <span
+            ><a href="#benefits"
+              ><ion-icon class="chevron-icon" name="chevron-down"></ion-icon></a
+          ></span>
+          <span><ion-icon class="camera-iconn" name="camera"></ion-icon></span>
+        </div>
+      </div>
+    </div>
+
+    <div id="benefits" class="product-section">
+      <div class="image">
+        <div class="image-container">
+          <ion-icon class="camera-icon" name="camera"></ion-icon>
+
+          <img class="img1" src="img/img1.webp" alt="img" />
+          <img class="img2" src="img/img2.webp" alt="img" />
+          <img class="img3" src="img/img3.webp" alt="img" />
+        </div>
+      </div>
+      <div class="product-details">
+        <h2>Product Benefits</h2>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit,
+          pariatur consequuntur nam, mollitia, velit eos exercitationem incidunt
+          nisi quos laborum nihil? Ipsa quidem dolorem labore ratione laboriosam
+          necessitatibus recusandae iusto?
+        </p>
+        <ul>
+          <li class="key1">
+            <h5>Key Benefits</h5>
+            <p class="p1">
+              What does your company offer that will improve or solve the
+              problem? <br />Explain the pain point being alleviated
+            </p>
+          </li>
+          <li class="key2">
+            <h5>Key Benefits</h5>
+            <p class="p2">
+              What does your company offer that will improve or solve a problem?
+              <br />Explain the pain point being alleviated
+            </p>
+          </li>
+          <li class="key3">
+            <h5>Key Benefits</h5>
+            <p class="p3">
+              What does your company offer that will improve or solve a problem?
+              <br />Explain the pain point being alleviated
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="testimonials" class="testimonials">
+      <p>What our customers say</p>
+      <span><i class="fa fa-quote-left"></i></span>
+      <h2>
+        <em
+          >This quote should counter any objections <br />
+          visitors might have using the product you are <br />
+          offering. Display the pain are solving.</em
+        >
+      </h2>
+      <img src="img/uifaces-popular-image.jpg" alt="Profile" />
+      <h5>Sam Johnstone</h5>
+      <h6>CEO of Internal Affairs and Head of Software Department</h6>
+    </div>
+
+    <div id="features" class="product-options">
+      <h1>Product Features</h1>
+      <p>
+        Add some more descriptive content here to describe your<br />product or
+        service. What your offer is and how you can improve <br />
+        your potential customers daily experience.
+      </p>
+      <div class="product-benefits">
+        <div class="box">
+          <h5>Key Benefits</h5>
+          <p>
+            Explain the features and what it accomplishes. <br />
+            What does your company offer that will improve <br />
+            or solve a problem?
+          </p>
+        </div>
+        <div class="box">
+          <h5>Key Benefits</h5>
+          <p>
+            Explain the features and what it accomplishes. <br />
+            What does your company offer that will improve <br />
+            or solve a problem?
+          </p>
+        </div>
+        <div class="box">
+          <h5>Key Benefits</h5>
+          <p>
+            Explain the features and what it accomplishes. <br />
+            What does your company offer that will improve <br />
+            or solve a problem?
+          </p>
+        </div>
+        <div class="box">
+          <h5>Key Benefits</h5>
+          <p>
+            Explain the features and what it accomplishes. <br />
+            What does your company offer that will improve <br />
+            or solve a problem?
+          </p>
+        </div>
+        <div class="box">
+          <h5>Key Benefits</h5>
+          <p>
+            Explain the features and what it accomplishes. <br />
+            What does your company offer that will improve <br />
+            or solve a problem?
+          </p>
+        </div>
+        <div class="box">
+          <h5>Key Benefits</h5>
+          <p>
+            Explain the features and what it accomplishes. <br />
+            What does your company offer that will improve <br />
+            or solve a problem?
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-brands">
+      <p>Companies that use our product everyday</p>
+      <ul>
+        <li><img src="img/pngwing.com (7).png" alt="brand" /></li>
+        <li><img src="img/fujitsu.png" alt="brand" /></li>
+        <li><img src="img/pngwing.com (6).png" alt="brand" /></li>
+        <li><img src="img/pngwing.com (3).png" alt="brand" /></li>
+        <li><img src="img/pngwing.com (4).png" alt="brand" /></li>
+        <li><img src="img/pngwing.com (5).png" alt="brand" /></li>
+      </ul>
+    </div>
+
+    <div id="pricing" class="pricing">
+      <h1>The Pricing Plan</h1>
+      <p>
+        Reinforce the reason why people use your product. <br />
+        Lead into the value of each plan before they <br />
+        proceed with their choice.
+      </p>
+      <div class="boxes">
+        <div class="box">
+          <h3>Free</h3>
+
+          <span class="dollar">$<span class="value">0</span></span>
+          <h4>Cost Free Forever</h4>
+
+          <ul>
+            <li><b>1</b> active projects</li>
+            <li><b>100mb</b> space</li>
+            <li>∞ collaborations</li>
+          </ul>
+          <button>Sign Up</button>
+          <p>No Credit Card Required</p>
+        </div>
+        <div class="box">
+          <h3>Professional</h3>
+
+          <span class="dollar"
+            >$<span class="value">8</span
+            ><span class="month">/month</span></span
+          >
+          <h4>Billed Annually</h4>
+
+          <ul>
+            <li><b>5</b> active projects</li>
+            <li><b>10gb</b> space</li>
+            <li>∞ collaborations</li>
+          </ul>
+          <button>Sign Up</button>
+          <p>No Credit Card Required</p>
+        </div>
+        <div class="box active">
+          <h3>Team</h3>
+
+          <span class="dollar"
+            >$<span class="value">22</span
+            ><span class="month">/month</span></span
+          >
+          <h4>Billed Annually</h4>
+
+          <ul>
+            <li><b>25</b> active projects</li>
+            <li><b>25gb</b> space</li>
+            <li>∞ collaborations</li>
+          </ul>
+          <button>Sign Up</button>
+          <p>No Credit Card Required</p>
+        </div>
+        <div class="box">
+          <h3>Plus</h3>
+
+          <span class="dollar"
+            >$<span class="value">89</span
+            ><span class="month">/month</span></span
+          >
+          <h4>Billed Annually</h4>
+
+          <ul>
+            <li><b>25</b> active projects</li>
+            <li><b>25gb</b> space</li>
+            <li>∞ collaborations</li>
+          </ul>
+          <button>Sign Up</button>
+          <p>No Credit Card Required</p>
+        </div>
+      </div>
+      <p class="footer-p">
+        All plans include the following features as a standard of our product
+      </p>
+    </div>
+
+    <div class="footer">
+      <div class="aboutus">
+        <h3>About us</h3>
+        <p>
+          A short description of what your company is al about. <br />
+          This could be a mission statement or tagline
+        </p>
+        <p>© 2024 Dot. All rights reserved</p>
+      </div>
+      <div class="location">
+        <h3>Location</h3>
+        <p>
+          000 West Oak Avenue, <br />
+          City Name, State 00000, Country
+        </p>
+        <p>info(at)unbounce.com</p>
+      </div>
+      <div class="subscribe">
+        <h3>Subscribe</h3>
+        <p>
+          Sign up if you want to stay up to date <br />
+          and recieve notifications.
+        </p>
+        <input type="email" placeholder="Enter your email" />
+        <input type="submit" value=">" />
+      </div>
+    </div>
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+  </body>
+</html>
